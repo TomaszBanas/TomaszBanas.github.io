@@ -1,0 +1,40 @@
+<div class="Container">
+  <div class="header">
+    <div>
+      <label>
+        HELLO
+      </label>
+      <label>
+        THERE
+      </label>
+    </div>
+    <div>
+      <img src="../assets/picture.png">
+    </div>
+    <div>
+      <label>
+        TOMASZ
+      </label>
+      <label>
+        BANAŚ
+      </label>
+    </div>
+  </div>
+  <div class="links">
+    <div>
+      <div class="label" [ngClass]="{'selected' : isPath('About')}" (click)="route('./About')">About</div>
+    </div>
+    <div>
+      <div class="label" [ngClass]="{'selected' : isPath('CV')}" (click)="route('./CV')">CV</div>
+    </div>
+    <div>
+      <div class="label" [ngClass]="{'selected' : isPath('Projects')}" (click)="route('./Projects')">Projects</div>
+    </div>
+    <div>
+      <div class="label" [ngClass]="{'selected' : isPath('Contact')}" (click)="route('./Contact')">Contact</div>
+    </div>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
